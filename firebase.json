@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ], 
+    "redirects": [
+      {
+        "source": "/permRedirect",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/tempRedirect",
+        "destination": "/",
+        "type": 302
+      },
+      {
+        "source": "/test",
+        "destination": "/",
+        "type": 302
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/test2",
+        "function": "sayHi"
+      },
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ]
+  }
+}
